@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Top frame style */
+#topFrame {
+    height: 80px;
+    background-color: #333;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    position: relative;
+}
+
+/* Logo in the top-left corner */
+#topFrame img {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    height: 60px;
+}
+
+/* Flex container for the layout */
+#mainContent {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Left side menu (CSE, EEE, etc.) */
+#leftMenu {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+#leftMenu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#leftMenu ul li {
+    padding: 10px;
+}
+
+#leftMenu ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+#leftMenu ul li a:hover {
+    background-color: #ddd;
+}
+
+/* Right side content area */
+#rightContent {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Navigation Menu (above the content frame) */
+#topNav {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 10px;
+}
+
+#topNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#topNav ul li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+#topNav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+#topNav ul li a:hover {
+    background-color: #ddd;
+}
+
+/* Content frame styling */
+iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+}

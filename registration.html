@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        textarea {
+            height: 80px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Registration Form</h1>
+
+    <form action="submit_registration.html" method="POST">
+
+        <!-- Name Field -->
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <!-- Password Field -->
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- Phone Number Field -->
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+        </div>
+
+        <!-- Gender (Sex) Radio Buttons -->
+        <div class="form-group">
+            <label>Sex:</label><br>
+            <input type="radio" id="male" name="sex" value="male" required>
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="sex" value="female">
+            <label for="female">Female</label><br>
+        </div>
+
+        <!-- Date of Birth (Select Boxes) -->
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label><br>
+            <select name="dob_day" required>
+                <option value="" disabled selected>Day</option>
+                <!-- Generate days dynamically -->
+                <script>
+                    for (let i = 1; i <= 31; i++) {
+                        document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+            </select>
+
+            <select name="dob_month" required>
+                <option value="" disabled selected>Month</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <!-- Continue adding months -->
+                <option value="December">December</option>
+            </select>
+
+            <select name="dob_year" required>
+                <option value="" disabled selected>Year</option>
+                <!-- Generate year options dynamically -->
+                <script>
+                    const currentYear = new Date().getFullYear();
+                    for (let i = currentYear; i >= 1900; i--) {
+                        document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+            </select>
+        </div>
+
+        <!-- Languages Known (Checkboxes) -->
+        <div class="form-group">
+            <label>Languages Known:</label><br>
+            <input type="checkbox" id="english" name="languages" value="English">
+            <label for="english">English</label><br>
+            <input type="checkbox" id="telugu" name="languages" value="Telugu">
+            <label for="telugu">Telugu</label><br>
+            <input type="checkbox" id="hindi" name="languages" value="Hindi">
+            <label for="hindi">Hindi</label><br>
+            <input type="checkbox" id="tamil" name="languages" value="Tamil">
+            <label for="tamil">Tamil</label><br>
+        </div>
+
+        <!-- Address Field (Textarea) -->
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Register</button>
+    </form>
+
+</body>
+</html>
