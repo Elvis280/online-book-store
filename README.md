@@ -4,7 +4,7 @@ This project is a simple static webpage for an online bookstore using modern web
 Feature-
 
 Dynamic Content Loading: JavaScript is used to dynamically switch between different sections (Home, Login, Registration, Catalogue, Cart) without reloading the entire page.
-HTML & CSS: The structure is based on HTML <div> elements, and styled using basic CSS to create a clean and professional layout.
+HTML & CSS: The structure is based on HTML div elements, and styled using basic CSS to create a clean and professional layout.
 
 
 Pages & Sections-
